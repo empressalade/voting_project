@@ -1,0 +1,16 @@
+ ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redisservice
+  labels:
+    name: redisservice
+    author: empress
+spec:
+  ports:
+    - targetPort: 6379
+      port: 6379
+      selector:
+        - name: redisapp
+          author: empress
+   ...

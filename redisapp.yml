@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redisapp
+  labels:
+    name: redisapp
+    author: empress
+spec:
+  containers:
+    - name: redisapp
+      image: redis
+      ports:
+        - containerPort: 6379
+...

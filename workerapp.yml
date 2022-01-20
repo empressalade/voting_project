@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: workerapp
+  labels:
+    name: workerapp
+    author: empress
+spec:
+  containers:
+    - name: mywokerapp
+      image: dockersamples/examplevotingapp_worker
+      ports:
+        containerPort: 80
+...

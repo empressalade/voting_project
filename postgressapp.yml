@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgressapp
+  labels:
+    name: postgressapp
+    author: empress
+spec:
+  containers:
+    - name: mypostgress
+      image: postgres
+      ports:
+        - containerPort: 5432
+      env:
+        - name: POSTGRES_PASSWORD
+          value: abc
+        - name: POSTGRES_DB
+          value: abc
+        - name: POSTGRES_USER
+          value: abc
+...
